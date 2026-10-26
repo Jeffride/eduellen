@@ -1,0 +1,9 @@
+[build]
+  # The static site lives in /website (the /infra folder is AWS CDK code and isn't deployed here)
+  publish = "website"
+
+# Serve the custom "page not found" page for unknown URLs
+[[redirects]]
+  from = "/*"
+  to = "/404/index.html"
+  status = 404
