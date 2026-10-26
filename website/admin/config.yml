@@ -1,13 +1,12 @@
 backend:
-  name: github
-  repo: Jeffride/EduEllen          # UPDATE: your GitHub username/repo
-  branch: main
-  base_url: https://eduellen.com   # Your live domain — required for auth proxy
-  auth_endpoint: api/auth          # Handled by the auth Lambda (see infra)
+  name: git-gateway          # Uses Netlify Git Gateway — no GitHub account needed for Ellen
+  branch: master             # Your repo's default branch
+  # eduellen.com is hosted on AWS, so point Identity and Git Gateway at the Netlify site
+  identity_url: https://eloquent-tanuki-5543ea.netlify.app/.netlify/identity
+  gateway_url: https://eloquent-tanuki-5543ea.netlify.app/.netlify/git
 
-# Netlify Identity handles auth — Ellen logs in with email/password
-# She never needs a GitHub account
-identity_url: https://identity.netlify.com
+# Netlify Identity — Ellen logs in with email/password (no GitHub account needed)
+# Set up at: app.netlify.com → your site → Identity → Enable
 
 # Where uploaded files (PDFs, images) are stored in the repo
 media_folder: website/assets/uploads
