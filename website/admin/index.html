@@ -3,12 +3,48 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>EduEllen CMS</title>
-  <!-- Netlify Identity Widget — provides standalone email/password login -->
-  <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
+  <title>EduEllen Admin</title>
+  <style>
+    body { margin: 0; font-family: sans-serif; background: #f5f1e8; }
+    #loading {
+      display: flex; flex-direction: column; align-items: center;
+      justify-content: center; height: 100vh; color: #24483D; gap: 1rem;
+    }
+    #loading strong { font-size: 1.4rem; font-weight: 700; }
+    #loading p { color: #586B62; font-size: .95rem; margin: 0; }
+  </style>
 </head>
 <body>
-  <!-- Decap CMS loads here -->
-  <script src="https://unpkg.com/decap-cms@^3.0.0/dist/decap-cms.js"></script>
+  <div id="loading">
+    <strong>eduellen<span style="color:#C7A56B">.</span> Admin</strong>
+    <p>Loading CMS…</p>
+  </div>
+
+  <!-- Netlify Identity — must load before Decap CMS -->
+  <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
+  <script>
+    // Point the Identity widget at your Netlify site (not eduellen.com)
+    // This is what makes login work when the site is hosted on AWS, not Netlify
+    // The widget re-runs init() with no options on DOMContentLoaded, so this has to
+    // run after it (this listener is registered later, so it fires later)
+    document.addEventListener('DOMContentLoaded', function () {
+      if (window.netlifyIdentity) {
+        window.netlifyIdentity.init({
+          APIUrl: 'https://eloquent-tanuki-5543ea.netlify.app/.netlify/identity'
+        });
+      }
+    });
+  </script>
+
+  <!-- Decap CMS -->
+  <script src="https://unpkg.com/decap-cms@3.3.3/dist/decap-cms.js"></script>
+
+  <script>
+    // Hide loading message once CMS has mounted
+    var loading = document.getElementById('loading');
+    if (loading) {
+      setTimeout(function () { loading.style.display = 'none'; }, 3000);
+    }
+  </script>
 </body>
 </html>
