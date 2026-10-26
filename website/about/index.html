@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Meet Ellen O'Sullivan, teacher of Business, Geography, Maths and Economics and founder of EduEllen.">
+  <meta name="theme-color" content="#24483D">
+  <title>About Ellen | eduellen.</title>
+  <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to content</a>
+<header class="site-header"><div class="container site-header__inner">
+  <a class="brand" href="/" aria-label="EduEllen home">eduellen<span class="brand__dot">.</span></a>
+  <button class="menu-toggle" type="button" aria-controls="primary-navigation" aria-expanded="false" aria-label="Open navigation menu">☰</button>
+  <nav class="site-nav" id="primary-navigation" aria-label="Primary navigation" data-open="false">
+    <a href="/">Home</a><a href="/subjects/">Subjects</a><a href="/resources/">Resources</a>
+    <a href="/grinds/">Grinds</a><a href="/teachers/">For Teachers</a><a href="/about/" aria-current="page">About</a>
+  </nav>
+</div></header>
+<main id="main">
+  <div class="page-hero"><div class="container">
+    <p class="eyebrow">About</p>
+    <h1>Meet Ellen O'Sullivan.</h1>
+    <p class="lead">The teacher behind eduellen<span class="brand__dot">.</span> — and why she built it.</p>
+  </div></div>
+
+  <section class="section"><div class="container about-grid">
+    <img class="about-grid__portrait"
+         src="/assets/ellen-portrait.jpg"
+         alt="Ellen O'Sullivan, teacher of Business, Geography, Maths and Economics"
+         width="280" height="373" loading="lazy">
+    <div>
+      <p class="eyebrow">Ellen O'Sullivan</p>
+      <h2>Every day is a chance to learn<span class="brand__dot">.</span></h2>
+      <p>I am a teacher of Business, Geography, Maths and Economics. I created EduEllen to bring together clear learning resources, practical tutoring and useful classroom materials — all in one place — for students and teachers who want straightforward, high-quality support.</p>
+      <p>Whether you are a student looking for revision notes and grind support, or a teacher searching for ready-to-use classroom materials, EduEllen is designed to make your work a little easier and a lot more effective.</p>
+      <p class="muted" style="font-size:.9rem">Confirm and expand this biography with qualifications, experience and other details before launch.</p>
+      <div style="display:flex;gap:.75rem;flex-wrap:wrap;margin-top:1.25rem">
+        <a class="button button--primary" href="/resources/">Explore Resources →</a>
+        <a class="button button--secondary" href="/grinds/">Book a Grind</a>
+        <a class="button button--secondary" href="/contact/">Get in touch</a>
+      </div>
+    </div>
+  </div></section>
+
+  <section class="section section--cream"><div class="container">
+    <div class="quote-panel" style="text-align:center;max-width:680px;margin-inline:auto">
+      <p class="eyebrow">Teaching philosophy</p>
+      <h2 style="font-size:clamp(1.4rem,3vw,2rem)">"Every day is a chance to learn."</h2>
+      <p class="lead">Clear explanations, well-structured resources and genuine encouragement make every subject more accessible — for students and teachers alike.</p>
+    </div>
+  </div></section>
+
+  <section class="section"><div class="container">
+    <div class="section-heading"><div><p class="eyebrow">Subjects</p><h2>Four subjects. One place.</h2></div></div>
+    <div class="hub-grid" style="margin-top:0">
+      <div class="hub-card"><h3>Geography</h3><p>Physical and human geography, case studies, fieldwork and exam preparation.</p><a class="button button--soft" href="/subjects/geography/" style="margin-top:.75rem;font-size:.85rem">Explore Geography →</a></div>
+      <div class="hub-card"><h3>Business</h3><p>Core business concepts, financial literacy, real-world case studies and applied questions.</p><a class="button button--soft" href="/subjects/business/" style="margin-top:.75rem;font-size:.85rem">Explore Business →</a></div>
+      <div class="hub-card"><h3>Maths</h3><p>Worked examples, topic notes and practice problems from foundation to higher level.</p><a class="button button--soft" href="/subjects/maths/" style="margin-top:.75rem;font-size:.85rem">Explore Maths →</a></div>
+      <div class="hub-card"><h3>Economics</h3><p>Micro and macro theory, data skills and exam essay technique.</p><a class="button button--soft" href="/subjects/economics/" style="margin-top:.75rem;font-size:.85rem">Explore Economics →</a></div>
+    </div>
+  </div></section>
+</main>
+<footer class="site-footer"><div class="container">
+  <div class="site-footer__grid">
+    <div><a class="brand" href="/" style="color:#fff">eduellen<span class="brand__dot">.</span></a><p style="margin-top:.6rem;color:#D9E4D7;font-size:.85rem">Business, Geography, Maths and Economics resources for students and teachers.</p></div>
+    <div><h3>Learn</h3><div class="site-footer__links"><a href="/subjects/business/">Business</a><a href="/subjects/geography/">Geography</a><a href="/subjects/maths/">Maths</a><a href="/subjects/economics/">Economics</a><a href="/resources/">All resources</a><a href="/grinds/">Grinds</a></div></div>
+    <div><h3>Teach</h3><div class="site-footer__links"><a href="/teachers/">Teacher hub</a><a href="/about/">About Ellen</a></div></div>
+    <div><h3>Information</h3><div class="site-footer__links"><a href="/contact/">Contact</a><a href="/privacy/">Privacy</a><a href="/cookies/">Cookies</a><a href="/terms/">Terms</a><a href="/refunds/">Refunds</a></div></div>
+  </div>
+  <div class="site-footer__bottom"><span>&copy; <span id="year">2026</span> eduellen<span class="brand__dot">.</span> All rights reserved.</span><span>Every day is a chance to learn.</span></div>
+</div></footer>
+<script>const b=document.querySelector('.menu-toggle'),n=document.querySelector('#primary-navigation');if(b&&n){b.addEventListener('click',()=>{const o=b.getAttribute('aria-expanded')==='true';b.setAttribute('aria-expanded',String(!o));b.setAttribute('aria-label',o?'Open navigation menu':'Close navigation menu');n.dataset.open=String(!o)});n.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>{b.setAttribute('aria-expanded','false');b.setAttribute('aria-label','Open navigation menu');n.dataset.open='false'}))}document.getElementById('year').textContent=new Date().getFullYear();</script>
+</body></html>

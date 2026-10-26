@@ -1,0 +1,34 @@
+# ── Node / CDK ──────────────────────────────────────────────────
+node_modules/
+npm-debug.log*
+yarn-error.log
+
+# CDK compiled output
+infra/dist/
+infra/cdk.out/
+
+# CDK context (machine-specific, regenerated on cdk synth)
+infra/cdk.context.json
+
+# ── TypeScript ───────────────────────────────────────────────────
+*.js.map
+*.d.ts.map
+
+# ── OS / editor ──────────────────────────────────────────────────
+.DS_Store
+Thumbs.db
+Desktop.ini
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# ── Environment / secrets ────────────────────────────────────────
+.env
+.env.*
+*.pem
+*.key
+
+# ── Logs ─────────────────────────────────────────────────────────
+*.log
+logs/

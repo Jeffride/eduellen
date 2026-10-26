@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Browse Business, Geography, Maths and Economics resources from EduEllen.">
+  <meta name="theme-color" content="#24483D">
+  <title>Resources | eduellen.</title>
+  <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to content</a>
+<header class="site-header"><div class="container site-header__inner">
+  <a class="brand" href="/" aria-label="EduEllen home">eduellen<span class="brand__dot">.</span></a>
+  <button class="menu-toggle" type="button" aria-controls="primary-navigation" aria-expanded="false" aria-label="Open navigation menu">☰</button>
+  <nav class="site-nav" id="primary-navigation" aria-label="Primary navigation" data-open="false">
+    <a href="/">Home</a><a href="/subjects/">Subjects</a><a href="/resources/" aria-current="page">Resources</a>
+    <a href="/grinds/">Grinds</a><a href="/teachers/">For Teachers</a><a href="/about/">About</a>
+  </nav>
+</div></header>
+<main id="main">
+  <div class="page-hero"><div class="container">
+    <p class="eyebrow">All resources</p>
+    <h1>Find the right material.</h1>
+    <p class="lead">Revision notes, case studies, worked examples, worksheets and exam prep across all four subjects.</p>
+  </div></div>
+
+  <section class="section"><div class="container">
+    <div class="section-heading">
+      <div><p class="eyebrow">Browse by subject</p><h2>Practical materials for meaningful learning.</h2></div>
+    </div>
+    <div style="display:flex;gap:.6rem;flex-wrap:wrap;margin-bottom:1.5rem">
+      <a class="button button--soft" href="/subjects/geography/" style="font-size:.85rem;min-height:36px">Geography</a>
+      <a class="button button--soft" href="/subjects/business/" style="font-size:.85rem;min-height:36px">Business</a>
+      <a class="button button--soft" href="/subjects/maths/" style="font-size:.85rem;min-height:36px">Maths</a>
+      <a class="button button--soft" href="/subjects/economics/" style="font-size:.85rem;min-height:36px">Economics</a>
+    </div>
+    <div class="resource-grid">
+      <article class="card">
+        <img class="card__image" src="/assets/geography-coastal.jpg" alt="" width="480" height="300" loading="lazy">
+        <div class="card__body"><span class="tag">Geography</span><h3>Resource title</h3><p class="muted">Description, level and curriculum information.</p><div class="card__footer"><span class="price">[Price / Free]</span><span class="muted" style="font-size:.8rem">PDF</span></div></div>
+      </article>
+      <article class="card">
+        <img class="card__image" src="/assets/business-group-study.jpg" alt="" width="480" height="300" loading="lazy">
+        <div class="card__body"><span class="tag tag--business">Business</span><h3>Resource title</h3><p class="muted">Description, level and curriculum information.</p><div class="card__footer"><span class="price">[Price / Free]</span><span class="muted" style="font-size:.8rem">PDF</span></div></div>
+      </article>
+      <article class="card">
+        <img class="card__image" src="/assets/two-people-studying.jpg" alt="" width="480" height="300" loading="lazy">
+        <div class="card__body"><span class="tag tag--maths">Maths</span><h3>Resource title</h3><p class="muted">Description, level and curriculum information.</p><div class="card__footer"><span class="price">[Price / Free]</span><span class="muted" style="font-size:.8rem">PDF</span></div></div>
+      </article>
+      <article class="card">
+        <img class="card__image" src="/assets/business-group-study.jpg" alt="" width="480" height="300" loading="lazy">
+        <div class="card__body"><span class="tag tag--economics">Economics</span><h3>Resource title</h3><p class="muted">Description, level and curriculum information.</p><div class="card__footer"><span class="price">[Price / Free]</span><span class="muted" style="font-size:.8rem">PDF</span></div></div>
+      </article>
+    </div>
+    <p class="muted" style="margin-top:2rem;font-size:.9rem">Connect to a real catalogue before launch. Do not publish placeholder titles as purchasable products.</p>
+  </div></section>
+</main>
+<footer class="site-footer"><div class="container">
+  <div class="site-footer__grid">
+    <div><a class="brand" href="/" style="color:#fff">eduellen<span class="brand__dot">.</span></a><p style="margin-top:.6rem;color:#D9E4D7;font-size:.85rem">Business, Geography, Maths and Economics resources for students and teachers.</p></div>
+    <div><h3>Learn</h3><div class="site-footer__links"><a href="/subjects/business/">Business</a><a href="/subjects/geography/">Geography</a><a href="/subjects/maths/">Maths</a><a href="/subjects/economics/">Economics</a><a href="/resources/">All resources</a><a href="/grinds/">Grinds</a></div></div>
+    <div><h3>Teach</h3><div class="site-footer__links"><a href="/teachers/">Teacher hub</a><a href="/about/">About Ellen</a></div></div>
+    <div><h3>Information</h3><div class="site-footer__links"><a href="/contact/">Contact</a><a href="/privacy/">Privacy</a><a href="/cookies/">Cookies</a><a href="/terms/">Terms</a><a href="/refunds/">Refunds</a></div></div>
+  </div>
+  <div class="site-footer__bottom"><span>&copy; <span id="year">2026</span> eduellen<span class="brand__dot">.</span> All rights reserved.</span><span>Every day is a chance to learn.</span></div>
+</div></footer>
+<script>const b=document.querySelector('.menu-toggle'),n=document.querySelector('#primary-navigation');if(b&&n){b.addEventListener('click',()=>{const o=b.getAttribute('aria-expanded')==='true';b.setAttribute('aria-expanded',String(!o));b.setAttribute('aria-label',o?'Open navigation menu':'Close navigation menu');n.dataset.open=String(!o)});n.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>{b.setAttribute('aria-expanded','false');b.setAttribute('aria-label','Open navigation menu');n.dataset.open='false'}))}document.getElementById('year').textContent=new Date().getFullYear();</script>
+</body></html>

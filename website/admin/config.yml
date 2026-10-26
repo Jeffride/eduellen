@@ -1,0 +1,139 @@
+backend:
+  name: github
+  repo: Jeffride/EduEllen          # UPDATE: your GitHub username/repo
+  branch: main
+  base_url: https://eduellen.com   # Your live domain — required for auth proxy
+  auth_endpoint: api/auth          # Handled by the auth Lambda (see infra)
+
+# Netlify Identity handles auth — Ellen logs in with email/password
+# She never needs a GitHub account
+identity_url: https://identity.netlify.com
+
+# Where uploaded files (PDFs, images) are stored in the repo
+media_folder: website/assets/uploads
+public_folder: /assets/uploads
+
+# Slug settings — auto-generate URL-safe filenames
+slug:
+  encoding: ascii
+  clean_accents: true
+  sanitize_replacement: "-"
+
+collections:
+
+  # ── Learning Resources ─────────────────────────────────────────
+  - name: resources
+    label: Resources
+    label_singular: Resource
+    folder: website/content/resources
+    create: true
+    slug: "{{slug}}"
+    summary: "{{title}} — {{subject}} — {{fields.price_label}}"
+    fields:
+      - label: Title
+        name: title
+        widget: string
+        hint: "The name of the resource as it will appear on the site."
+
+      - label: Subject
+        name: subject
+        widget: select
+        options:
+          - { label: Geography, value: geography }
+          - { label: Business, value: business }
+          - { label: Maths, value: maths }
+          - { label: Economics, value: economics }
+
+      - label: Audience
+        name: audience
+        widget: select
+        options:
+          - { label: Students, value: students }
+          - { label: Teachers, value: teachers }
+          - { label: Both, value: both }
+        default: students
+
+      - label: Level / Year Group
+        name: level
+        widget: string
+        hint: "e.g. Leaving Cert Higher, Junior Cycle, A-Level"
+        required: false
+
+      - label: Description
+        name: description
+        widget: text
+        hint: "A short, honest description of what the learner receives."
+
+      - label: What is included
+        name: contents
+        widget: text
+        hint: "List what is in the download — pages, sections, answer keys etc."
+        required: false
+
+      - label: Free or Paid
+        name: free
+        widget: boolean
+        label_singular: Free resource
+        default: true
+
+      - label: Price (e.g. €3.99)
+        name: price_label
+        widget: string
+        hint: "Leave blank if free."
+        required: false
+
+      - label: Preview image
+        name: preview_image
+        widget: image
+        hint: "A cover image shown on the resource card (JPG or PNG)."
+        required: false
+
+      - label: Resource file (PDF)
+        name: resource_file
+        widget: file
+        hint: "Upload the PDF. Paid resources will require a download gate before launch."
+        required: false
+        media_library:
+          config:
+            multiple: false
+
+      - label: Curriculum / Country
+        name: curriculum
+        widget: string
+        hint: "e.g. Irish Leaving Certificate, GCSE, IB. Leave blank if general."
+        required: false
+
+      - label: Publication status
+        name: status
+        widget: select
+        options:
+          - { label: Draft (not visible), value: draft }
+          - { label: Published (visible on site), value: published }
+        default: draft
+
+      - label: Last reviewed date
+        name: last_reviewed
+        widget: date
+        required: false
+
+  # ── Site settings ──────────────────────────────────────────────
+  - name: settings
+    label: Site Settings
+    files:
+      - label: Contact details
+        name: contact
+        file: website/content/settings/contact.json
+        fields:
+          - label: Contact email
+            name: email
+            widget: string
+            hint: "Shown on the contact page. Confirm before publishing."
+            required: false
+          - label: Social — Instagram URL
+            name: instagram
+            widget: string
+            required: false
+          - label: Social — LinkedIn URL
+            name: linkedin
+            widget: string
+            required: false

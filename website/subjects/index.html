@@ -1,0 +1,61 @@
+﻿<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Explore Business, Geography, Maths and Economics with EduEllen.">
+  <meta name="theme-color" content="#24483D">
+  <title>Subjects | eduellen.</title>
+  <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to content</a>
+<header class="site-header"><div class="container site-header__inner">
+  <a class="brand" href="/" aria-label="EduEllen home">eduellen<span class="brand__dot">.</span></a>
+  <button class="menu-toggle" type="button" aria-controls="primary-navigation" aria-expanded="false" aria-label="Open navigation menu">☰</button>
+  <nav class="site-nav" id="primary-navigation" aria-label="Primary navigation" data-open="false">
+      <a href="/">Home</a>
+      <a href="/subjects/" aria-current="page">Subjects</a>
+      <a href="/resources/">Resources</a>
+      <a href="/grinds/">Grinds</a>
+      <a href="/teachers/">For Teachers</a>
+      <a href="/about/">About</a>
+  </nav>
+</div></header>
+<main id="main">
+<div class="page-hero"><div class="container">
+  <p class="eyebrow">Choose your subject</p>
+  <h1>Explore the subjects</h1>
+  <p class="lead">Four subjects. Clear resources. Every level covered.</p>
+</div></div>
+<section class="section"><div class="container">
+  <div class="subject-grid">
+    <article class="subject-card">
+      <img class="subject-card__image" src="/assets/geography-coastal.jpg" alt="Aerial view of a green Irish coastline" width="600" height="600" loading="lazy">
+      <div class="subject-card__content"><p class="eyebrow">Explore</p><h3>Geography</h3><p>Case studies, diagrams, fieldwork and revision notes that bring places and processes to life.</p><a class="button button--soft" href="/subjects/geography/">Explore Geography →</a></div>
+    </article>
+    <article class="subject-card subject-card--alt">
+      <img class="subject-card__image" src="/assets/business-group-study.jpg" alt="Students reviewing business charts" width="600" height="600" loading="lazy">
+      <div class="subject-card__content"><p class="eyebrow">Explore</p><h3>Business</h3><p>Key concepts, real-world examples, exam preparation and classroom materials.</p><a class="button button--gold" href="/subjects/business/">Explore Business →</a></div>
+    </article>
+    <article class="subject-card subject-card--sand">
+      <img class="subject-card__image" src="/assets/two-people-studying.jpg" alt="Two people studying with laptops and notes" width="600" height="600" loading="lazy">
+      <div class="subject-card__content"><p class="eyebrow">Explore</p><h3>Maths</h3><p>Worked examples, step-by-step notes and practice problems to build confidence at every level.</p><a class="button button--soft" href="/subjects/maths/">Explore Maths →</a></div>
+    </article>
+    <article class="subject-card">
+      <img class="subject-card__image" src="/assets/business-group-study.jpg" alt="Students analysing economic data" width="600" height="600" loading="lazy">
+      <div class="subject-card__content"><p class="eyebrow">Explore</p><h3>Economics</h3><p>Micro to macro — theory, data and real-world applications made accessible.</p><a class="button button--gold" href="/subjects/economics/">Explore Economics →</a></div>
+    </article>
+  </div>
+</div></section>
+</main>
+<footer class="site-footer"><div class="container">
+  <div class="site-footer__grid">
+    <div><a class="brand" href="/" style="color:#fff">eduellen<span class="brand__dot">.</span></a><p style="margin-top:.6rem;color:#D9E4D7;font-size:.85rem">Business, Geography, Maths and Economics resources for students and teachers.</p></div>
+    <div><h3>Learn</h3><div class="site-footer__links"><a href="/subjects/business/">Business</a><a href="/subjects/geography/">Geography</a><a href="/subjects/maths/">Maths</a><a href="/subjects/economics/">Economics</a><a href="/resources/">All resources</a><a href="/grinds/">Grinds</a></div></div>
+    <div><h3>Teach</h3><div class="site-footer__links"><a href="/teachers/">Teacher hub</a><a href="/about/">About Ellen</a></div></div>
+    <div><h3>Information</h3><div class="site-footer__links"><a href="/contact/">Contact</a><a href="/privacy/">Privacy</a><a href="/cookies/">Cookies</a><a href="/terms/">Terms</a><a href="/refunds/">Refunds</a></div></div>
+  </div>
+  <div class="site-footer__bottom"><span>&copy; <span id="year">2026</span> eduellen<span class="brand__dot">.</span> All rights reserved.</span><span>Every day is a chance to learn.</span></div>
+</div></footer>
+<script>const b=document.querySelector('.menu-toggle'),n=document.querySelector('#primary-navigation');if(b&&n){b.addEventListener('click',()=>{const o=b.getAttribute('aria-expanded')==='true';b.setAttribute('aria-expanded',String(!o));b.setAttribute('aria-label',o?'Open navigation menu':'Close navigation menu');n.dataset.open=String(!o)});n.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>{b.setAttribute('aria-expanded','false');b.setAttribute('aria-label','Open navigation menu');n.dataset.open='false'}))}document.getElementById('year').textContent=new Date().getFullYear();</script>
+</body></html>

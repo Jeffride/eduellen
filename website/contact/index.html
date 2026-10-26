@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Get in touch with Ellen O'Sullivan at EduEllen.">
+  <meta name="theme-color" content="#24483D">
+  <title>Contact | eduellen.</title>
+  <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to content</a>
+<header class="site-header"><div class="container site-header__inner">
+  <a class="brand" href="/" aria-label="EduEllen home">eduellen<span class="brand__dot">.</span></a>
+  <button class="menu-toggle" type="button" aria-controls="primary-navigation" aria-expanded="false" aria-label="Open navigation menu">☰</button>
+  <nav class="site-nav" id="primary-navigation" aria-label="Primary navigation" data-open="false">
+    <a href="/">Home</a><a href="/subjects/">Subjects</a><a href="/resources/">Resources</a>
+    <a href="/grinds/">Grinds</a><a href="/teachers/">For Teachers</a><a href="/about/">About</a>
+  </nav>
+</div></header>
+<main id="main">
+  <div class="page-hero"><div class="container">
+    <p class="eyebrow">Get in touch</p>
+    <h1>Contact Ellen.</h1>
+    <p class="lead">Questions about grinds, resources or teaching materials? Fill in the form below.</p>
+  </div></div>
+  <section class="section"><div class="container" style="max-width:640px">
+    <form action="[CONNECT_FORM_PROVIDER]" method="post" novalidate>
+      <div style="margin-bottom:1.25rem">
+        <label for="c-name">Your name</label>
+        <input class="field" id="c-name" name="name" type="text" autocomplete="name" required placeholder="Your name">
+      </div>
+      <div style="margin-bottom:1.25rem">
+        <label for="c-email">Email address</label>
+        <input class="field" id="c-email" name="email" type="email" autocomplete="email" required placeholder="you@example.com">
+      </div>
+      <div style="margin-bottom:1.25rem">
+        <label for="c-subject">I am enquiring about</label>
+        <select class="field" id="c-subject" name="subject">
+          <option value="">— Select —</option>
+          <option>Geography grind</option>
+          <option>Business grind</option>
+          <option>Maths grind</option>
+          <option>Economics grind</option>
+          <option>Student resource question</option>
+          <option>Teacher materials</option>
+          <option>General question</option>
+        </select>
+      </div>
+      <div style="margin-bottom:1.25rem">
+        <label for="c-msg">Message</label>
+        <textarea class="field" id="c-msg" name="message" rows="6" required placeholder="Your message"></textarea>
+      </div>
+      <p class="text-small muted" style="margin-bottom:1rem">Read our <a href="/privacy/">privacy notice</a>. Connect this form to a real provider (e.g. Formspree) before launch.</p>
+      <button class="button button--primary" type="submit">Send message</button>
+    </form>
+  </div></section>
+</main>
+<footer class="site-footer"><div class="container">
+  <div class="site-footer__grid">
+    <div><a class="brand" href="/" style="color:#fff">eduellen<span class="brand__dot">.</span></a><p style="margin-top:.6rem;color:#D9E4D7;font-size:.85rem">Business, Geography, Maths and Economics resources for students and teachers.</p></div>
+    <div><h3>Learn</h3><div class="site-footer__links"><a href="/subjects/business/">Business</a><a href="/subjects/geography/">Geography</a><a href="/subjects/maths/">Maths</a><a href="/subjects/economics/">Economics</a><a href="/resources/">All resources</a><a href="/grinds/">Grinds</a></div></div>
+    <div><h3>Teach</h3><div class="site-footer__links"><a href="/teachers/">Teacher hub</a><a href="/about/">About Ellen</a></div></div>
+    <div><h3>Information</h3><div class="site-footer__links"><a href="/contact/">Contact</a><a href="/privacy/">Privacy</a><a href="/cookies/">Cookies</a><a href="/terms/">Terms</a><a href="/refunds/">Refunds</a></div></div>
+  </div>
+  <div class="site-footer__bottom"><span>&copy; <span id="year">2026</span> eduellen<span class="brand__dot">.</span> All rights reserved.</span><span>Every day is a chance to learn.</span></div>
+</div></footer>
+<script>const b=document.querySelector('.menu-toggle'),n=document.querySelector('#primary-navigation');if(b&&n){b.addEventListener('click',()=>{const o=b.getAttribute('aria-expanded')==='true';b.setAttribute('aria-expanded',String(!o));b.setAttribute('aria-label',o?'Open navigation menu':'Close navigation menu');n.dataset.open=String(!o)});n.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>{b.setAttribute('aria-expanded','false');b.setAttribute('aria-label','Open navigation menu');n.dataset.open='false'}))}document.getElementById('year').textContent=new Date().getFullYear();</script>
+</body></html>
