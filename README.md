@@ -22,19 +22,6 @@ Static HTML / CSS / assets
 Route 53 → A + AAAA alias records → CloudFront
 ```
 
-**Monthly cost estimate (low traffic):**
-| Resource | Cost |
-|---|---|
-| S3 storage (1 GB) | ~$0.023 |
-| S3 requests (PUT/GET) | ~$0.01 |
-| CloudFront data (10 GB) | ~$0.85 |
-| CloudFront requests (1M) | ~$0.01 |
-| Route 53 hosted zone | $0.50 |
-| ACM certificate | Free |
-| **Total** | **~$1.40 / month** |
-
-Cost scales linearly with traffic. The PriceClass 100 setting limits edge locations to Europe and North America, which covers the Irish audience and reduces per-GB cost.
-
 ## Prerequisites
 
 - Node.js 18+ and npm
@@ -42,27 +29,6 @@ Cost scales linearly with traffic. The PriceClass 100 setting limits edge locati
 - AWS CLI configured: `aws configure` or `aws sso login`
 - AWS account **556036327386** with Route 53 hosted zone for `eduellen.com`
 
-## First-time setup
-
-```bash
-cd infra
-npm install
-```
-
-Bootstrap CDK (once per account/region):
-```bash
-npx cdk bootstrap aws://556036327386/us-east-1
-```
-
-## Deploy
-
-```bash
-# Preview changes
-npx cdk diff
-
-# Deploy (creates/updates all AWS resources)
-npx cdk deploy
-```
 
 CloudFormation outputs after deploy:
 - `DistributionDomain` — use this URL immediately (before DNS cuts over)
@@ -83,9 +49,6 @@ eduellen/
     └── assets/     ← images, fonts (see assets/README.md)
 ```
 
-## Custom domain not in Route 53 yet?
-
-Set `createDnsRecords: false` in `bin/eduellen.ts`, deploy, then point your registrar's nameservers at Route 53 once you've created the hosted zone. Switch back to `true` and redeploy to issue the certificate and create the DNS records.
 
 ## Invalidate cache after a content update
 
